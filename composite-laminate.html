@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c10">
+  <meta name="description" content="Case study: a physics-based and machine-learning framework for composite laminate failure prediction by Akshay Bhave.">
+  <title>Composite Laminate Failure Prediction | Akshay Bhave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-page">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">AB</span><span>AKSHAY BHAVE</span></a>
+    <nav class="nav" aria-label="Case study navigation"><a href="index.html#projects">← All projects</a><a href="#methodology">Methodology</a><a href="#results">Results</a></nav>
+    <a class="header-cta" href="index.html#contact">Let's connect <span>↗</span></a>
+  </header>
+  <main>
+    <section class="case-hero"><div class="case-wrap">
+      <p class="case-kicker">PROJECT 01 / COMPUTATIONAL MECHANICS × MACHINE LEARNING</p>
+      <h1>ML Surrogate Model for Composite Laminate Failure Prediction</h1>
+      <p class="case-lede">An end-to-end engineering project that brings together composite laminate mechanics, physics-based failure analysis, a deep neural network surrogate, and a web application for making predictions accessible.</p>
+      <span class="case-role">SOLE DEVELOPER · END-TO-END DESIGN AND IMPLEMENTATION</span>
+    </div></section>
+    <section class="case-stats" id="results">
+      <div class="case-stat"><strong>20,000</strong><span>Physics-generated synthetic samples</span></div>
+      <div class="case-stat"><strong>0.998562</strong><span>Held-out test R²</span></div>
+      <div class="case-stat"><strong>0.999208</strong><span>Independent unseen-data R²</span></div>
+      <div class="case-stat"><strong>7</strong><span>Failure criteria in the physics framework</span></div>
+    </section>
+    <section class="case-section"><div class="case-section-inner">
+      <p class="eyebrow">01 / THE PROBLEM</p><h2>Connect engineering physics with fast prediction.</h2>
+      <p>Composite laminate failure analysis requires mechanical modelling and evaluation of failure criteria. This project builds a physics-based reference framework and trains a machine-learning surrogate to approximate its predictions, then wraps the workflow in a web application.</p>
+      <div class="case-grid">
+        <article class="case-panel"><h3>Engineering challenge</h3><p>Represent laminate behaviour and failure assessment consistently enough to generate a useful synthetic dataset and reference predictions.</p></article>
+        <article class="case-panel"><h3>Project objective</h3><p>Develop a complete pipeline—from physics-based calculations to a trained model and user-facing prediction interface.</p></article>
+      </div>
+    </div></section>
+    <section class="case-section" id="methodology"><div class="case-section-inner">
+      <p class="eyebrow">02 / METHODOLOGY</p><h2>From mechanics to an accessible application.</h2>
+      <div class="flow">
+        <div class="flow-step"><b>STEP 01</b><span>Composite laminate mechanics</span></div>
+        <div class="flow-step"><b>STEP 02</b><span>Physics-based failure framework</span></div>
+        <div class="flow-step"><b>STEP 03</b><span>Synthetic data generation + DNN</span></div>
+        <div class="flow-step"><b>STEP 04</b><span>API + web interface</span></div>
+      </div>
+      <h3>Physics-based framework</h3><p>Implemented Classical Lamination Theory (CLT) and a framework spanning maximum stress, maximum strain, Tsai–Hill, Tsai–Wu, Hashin and related failure formulations represented in the project workflow. The physics-based implementation provides the reference outputs used to create training data and evaluate the surrogate.</p>
+      <h3>Dataset and surrogate model</h3><p>Generated 20,000 synthetic samples using the physics framework and trained a deep neural network (DNN) to approximate the reference predictions. Evaluation included a held-out test set and an independent unseen-data check.</p>
+      <h3>Full-stack application</h3><p>Built a FastAPI backend and React frontend, connecting the prediction workflow to a web interface. This makes the project more than a standalone model: it includes an application layer for user interaction.</p>
+    </div></section>
+    <section class="case-section"><div class="case-section-inner">
+      <p class="eyebrow">03 / IMPLEMENTATION</p><h2>A cross-disciplinary engineering build.</h2>
+      <div class="case-grid">
+        <article class="case-panel"><h3>Mechanics and materials</h3><p>Classical Lamination Theory, laminate-level analysis, and established failure criteria.</p></article>
+        <article class="case-panel"><h3>Scientific computing</h3><p>Python-based implementation, physics-generated samples, and model evaluation.</p></article>
+        <article class="case-panel"><h3>Machine learning</h3><p>DNN surrogate training and quantitative comparison with the reference model.</p></article>
+        <article class="case-panel"><h3>Software integration</h3><p>FastAPI service and React interface connected into a single prediction workflow.</p></article>
+      </div>
+    </div></section>
+    <section class="case-section"><div class="case-section-inner">
+      <p class="eyebrow">04 / RESULTS AND INTERPRETATION</p><h2>Strong agreement with the reference model.</h2>
+      <p>The project report records a held-out test R² of <strong>0.998562</strong> and an independent unseen-data R² of <strong>0.999208</strong>. These values indicate that the surrogate closely reproduces the outputs of the physics-based reference framework on the evaluated data.</p>
+      <div class="note-panel"><p><strong>Important scope note:</strong> these metrics describe agreement with the computational reference model. They should not be presented as experimental validation against physical laminate tests.</p></div>
+    </div></section>
+    <section class="case-section"><div class="case-section-inner">
+      <p class="eyebrow">05 / LIMITATIONS AND NEXT STEPS</p><h2>Good engineering includes knowing what remains.</h2>
+      <ul>
+        <li>Validate predictions against experimental composite-laminate data.</li>
+        <li>Investigate prediction errors and model behaviour at high failure-index values.</li>
+        <li>Assess coverage across a broader range of materials and laminate configurations.</li>
+        <li>Document model assumptions, input ranges, and applicability limits clearly in the application.</li>
+      </ul>
+    </div></section>
+    <section class="case-section"><div class="case-section-inner">
+      <p class="eyebrow">06 / MY CONTRIBUTION</p><h2>Designed and built independently.</h2>
+      <p>I completed the project end to end, covering the composite-mechanics and failure-analysis framework, synthetic dataset generation, machine-learning surrogate, backend API, frontend interface, and system integration.</p>
+      <p class="muted">The public GitHub profile is linked from the main portfolio. A dedicated repository link can be added once the project repository itself is published and reviewed for secrets, generated files and confidential material.</p>
+      <a class="button button-light" href="index.html#projects">Back to portfolio <span>↗</span></a>
+    </div></section>
+  </main>
+  <footer class="case-footer"><a href="index.html">AKSHAY BHAVE</a><span>COMPUTATIONAL MECHANICS · MACHINE LEARNING</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">BACK TO TOP ↑</a></footer>
+</body></html>
